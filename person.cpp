@@ -62,16 +62,16 @@ void person::askForID()
     {
     std::cout<<"Enter ID: ";
     std::cin>>tempID;
-    if(tempID>=0 && tempID<=100000 && !cin.fail()){
+    if(tempID>=0 && tempID<=100000 && !std::cin.fail()){
         break;
     }
     else{
         std::cout<<"Error ID must be between 0 and 100000 \n";
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        
     }
     }
-    setID(tempID);
 
+    setID(tempID);
 
 }
