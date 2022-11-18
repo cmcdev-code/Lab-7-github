@@ -45,7 +45,33 @@ int person::getId() const
     return this->ID;
 }
 
+void person::askForFname()
+{
+    std::cout<<"Enter first name: ";
+    getline(std::cin,this->fName);
+}
+void person::askForLname()
+{
+    std::cout<<"Enter last name: ";
+    getline(std::cin,this->lName);
+}
+void person::askForID()
+{
+    int tempID;
+    while(true)
+    {
+    std::cout<<"Enter ID: ";
+    std::cin>>tempID;
+    if(tempID>=0 && tempID<=100000 && !cin.fail()){
+        break;
+    }
+    else{
+        std::cout<<"Error ID must be between 0 and 100000 \n";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+    }
+    setID(tempID);
 
 
-
-
+}

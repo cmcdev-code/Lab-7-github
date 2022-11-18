@@ -26,6 +26,10 @@ class person{
 
     void setID(int ID);
 
+    void askForFname();
+    void askForLname();
+
+    void askForID();
 
 
     string getFname() const;
